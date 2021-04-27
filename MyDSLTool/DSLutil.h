@@ -6,6 +6,17 @@
 #include "Instruction.h"
 #include "InstructionCategories.h"
 using namespace Dyninst;
+#define get_start_addr(F)       (char *)F->getBaseAddr()
+#define f.open(var)             f.open(var, ios::in | ios::out)
+void writeToFile(fstream &file, uintptr_t val ){
+        file<<val<<endl;
+}
+void writeToFile(fstream &file, std::string val ){
+        file<<val<<endl;
+}
+void writeToFile(fstream &file, char* val ){
+        file<<val<<endl;
+}
 InstructionAPI::InsnCategory get_opcode(std::pair<InstructionAPI::Instruction,Address >& insn){
         if(insn.first.readsMemory()) return Dyninst::InstructionAPI::c_LoadInsn;
         else if(insn.first.writesMemory()) return Dyninst::InstructionAPI::c_StoreInsn;

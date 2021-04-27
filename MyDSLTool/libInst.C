@@ -16,6 +16,9 @@
 //#include "DSLutil.h"
 
 using namespace std;
+
+/*--- Global Var Decl Start ---*/
+/*--- Global Var Decl End ---*/
 void print(int x){
    printf("%d\n", x);
 }
@@ -29,10 +32,7 @@ void print(const char* x){
 
 /*--- Instrumentation Functions End ---*/
 
-//void exit_func() {
-
-
-void exit_func(int var0) {
+void exit_func() {
     /*--- Exit Function Start ---*/
     /*--- Exit Function End ---*/
 }

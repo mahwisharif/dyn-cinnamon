@@ -48,8 +48,8 @@ char *inBinary = NULL;
 char *outBinary = NULL;
 accessType_t mode = open; //default is static /open
 int pid = -1;
-/*----- Global Defs Start -----*/
-/*----- Global Defs End -----*/
+/*----- Global Var Decl Start -----*/
+/*----- Global Var Decl End -----*/
 
 bool parseArgs (int argc, char *argv[])
 {
